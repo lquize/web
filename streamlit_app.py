@@ -148,12 +148,58 @@ st.markdown("""
 """, unsafe_allow_html=True)
 st.markdown("---")
 
+
 # --- 6. 섹션 3: Flexbox를 이용한 카드 레이아웃 ---
 st.header("3. HTML/CSS: 🎨 Flexbox로 카드 정렬하기")
 st.markdown("""
 <div class="flex-container">
-    <div clas상 예제")
-    st.video("https://www.youtube.com/watch?v=eIVnOIVt5qA&list=RDeIVnOIVt5qA&start_radio=1")
+    <div class="flex-card">
+        <h4>카드 1: HTML</h4>
+        <p>웹 페이지의 뼈대를 만듭니다. (<code>div</code>, <code>p</code>, <code>h4</code>...)</p>
+    </div>
+    <div class="flex-card">
+        <h4>카드 2: CSS</h4>
+        <p>웹 페이지를 예쁘게 꾸며줍니다. (<code>color</code>, <code>background</code>...)</p>
+    </div>
+    <div class="flex-card">
+        <h4>카드 3: Streamlit</h4>
+        <p>파이썬만으로 이 모든 것을 쉽게 만들 수 있게 해줍니다.</p>
+    </div>
+</div>
+""", unsafe_allow_html=True)
+st.markdown("---")
+
+# --- 7. 섹션 4: 애니메이션이 있는 버튼 ---
+st.header("4. HTML/CSS: 🚀 빛나는 애니메이션 버튼")
+st.markdown('<div style="text-align: center; padding: 20px;"><button class="glowing-button">✨ 마법 버튼 ✨</button></div>', unsafe_allow_html=True)
+st.markdown("---")
+
+# --- 8. 섹션 5: Streamlit 기본 기능 (데이터프레임) ---
+st.header("5. Streamlit 기본 기능: 📊 데이터프레임")
+st.write("Streamlit은 Pandas 데이터프레임을 표로 멋지게 보여줍니다.")
+df = pd.DataFrame({
+    "Name": ["Alice", "Bob", "Charlie"],
+    "Age": [24, 30, 29],
+    "Country": ["Korea", "USA", "UK"]
+})
+st.dataframe(df)
+st.markdown("---")
+
+# --- 9. 섹션 6: Streamlit 기본 기능 (이미지 및 비디오) ---
+st.header("6. Streamlit 기본 기능: 🖼️ 이미지와 🎬 비디오")
+
+# 컬럼을 사용해 좌우로 배치
+col1, col2 = st.columns(2)
+
+with col1:
+    st.write("이미지 표시 예제")
+    st.image("https://www.streamlit.io/images/brand/streamlit-logo-primary-colormark-darktext.png", caption="Streamlit 로고")
+
+with col2:
+    st.write("유튜브 동영상 예제")
+    st.video("https://www.youtube.com/watch?v=-39sy2JlqPE&list=RDeIVnOIVt5qA&index=2)
+    
+
 
 # --- 10. 마무리 ---
 st.markdown("---")
